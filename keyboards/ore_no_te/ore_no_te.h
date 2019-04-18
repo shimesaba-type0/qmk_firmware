@@ -1,4 +1,4 @@
-/* Copyright 2019 %YOUR_NAME%
+/* Copyright 2019 'Takashi Kono'
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,10 +26,18 @@
  * represents the switch matrix.
  */
 #define LAYOUT( \
-    k00, k01, k02, \
-      k10,  k11   \
+    L00, L01, L02, L03, L04, L05, \
+    L10, L11, L12, L13, L14, L15, \
+    L20, L21, L22, L23, L24, L25, L26, \
+    L30, L31, L32, L33, L34, L35, L36, \
+              L42, L43, L44, L45 \
 ) \
 { \
-    { k00, k01,   k02 }, \
-    { k10, KC_NO, k11 }, \
+    { L00,   L01,   L02, L03, L04, L05, KC_NO }, \
+    { L10,   L11,   L12, L13, L14, L15, KC_NO }, \
+    { L20,   L21,   L22, L23, L24, L25, L26 }, \
+    { L30,   L31,   L32, L33, L34, L35, L36 }, \
+    { KC_NO, KC_NO, L42, L43, L44, L45, KC_NO } \
 }
+
+

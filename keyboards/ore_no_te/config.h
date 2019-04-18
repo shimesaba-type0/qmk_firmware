@@ -1,5 +1,5 @@
 /*
-Copyright 2019 %YOUR_NAME%
+Copyright 2019 'Takashi Kono'
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,8 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x0000
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    Takashi_Kono
-#define PRODUCT         ore_no_te
+#define MANUFACTURER    Takashi Kono
+#define PRODUCT         ore no te
 #define DESCRIPTION     A custom keyboard
 
 /* key matrix size */
