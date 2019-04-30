@@ -17,3 +17,5 @@
 #pragma once
 
 // place overrides here
+#define USE_SERIAL
+
