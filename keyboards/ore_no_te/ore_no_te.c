@@ -15,6 +15,8 @@
  */
 #include "ore_no_te.h"
 
+/*
+ *
 void matrix_init_kb(void) {
 	// put your keyboard start-up code here
 	// runs once when the firmware starts up
@@ -41,3 +43,5 @@ void led_set_kb(uint8_t usb_led) {
 
 	led_set_user(usb_led);
 }
+
+*/

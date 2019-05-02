@@ -1,4 +1,4 @@
-# ore_no_te
+# 俺の手 ore no te
 
 ![ore_no_te](imgur.com image replace me!)
 
