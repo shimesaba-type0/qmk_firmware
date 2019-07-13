@@ -20,12 +20,14 @@
 
 extern keymap_config_t keymap_config;
 
-#define _BASE  0
-#define _ECLYN 3 // Eucalyn Custom layout
-#define _ARROW 5 // Arrow
-#define _META  7
-#define _SYMB  9
 
+enum layer_number {
+    _BASE,
+    _ECLYN,     // Eucalyn Custom layout
+    _ARROW,     // Arrow
+    _META,
+    _SYMB
+};
 
 enum custom_keycodes {
   BASE = SAFE_RANGE,
@@ -70,8 +72,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
  * | LSFT |   Z  |  X   |   C  |   V  |   F  |  [   |   |  ]   |   B  |   G  |   T  |   S  |   /  | RSFT |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
- *               | META |ESC/  |Space/|Tab/  |                 |Back  |Enter/| Del/ | SYMB |
- *               |      |~SYMB |LCtrl |Shift |                 |Space |~META | RCTRL|      |
+ *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| Del/ | SYMB/|
+ *               | LALT |~SYMB |LCtrl |Shift |                 |Shift |~META | RCTRL| RALT |
  *               `---------------------------'                 `---------------------------'
  */
 
@@ -95,14 +97,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |   |      |      |      |      |      |      |      |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
- *               | META |ESC/  |Space/|Tab/  |                 |Back  |Enter/| Del/ | SYMB |
- *               |      |~SYMB |LCtrl |Shift |                 |Space |~META | RCTRL|      |
+ *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| Del/ | SYMB/|
+ *               | LALT |~SYMB |LCtrl |Shift |                 |Shift |~META | RCTRL| RALT |
  *               `---------------------------'                 `---------------------------'
  */
 
 
  [_ARROW] = LAYOUT( \
-   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, RESET, \
+   _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  EEP_RST, RESET, \
    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, \
    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, XXXXXXX, XXXXXXX, \
    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, \
@@ -120,8 +122,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
  * | Sft  |  F1  |  F2  |  F3  |  F4  |  F5  |  *   |   |  /   |  F8  |  F9  | F10  | F11  | F12  |\/Sft |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
- *               | META |ESC/  |Space/|Tab/  |                 |Back  |Enter/| Del/ | SYMB |
- *               |      |~SYMB |LCtrl |Shift |                 |Space |~META | RCTRL|      |
+ *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| Del/ | SYMB/|
+ *               | LALT |~SYMB |LCtrl |Shift |                 |Shift |~META | RCTRL| RALT |
  *               `---------------------------'                 `---------------------------'
  */
  [_META] = LAYOUT( \
@@ -142,8 +144,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
  * | Sft  |      | APP  | GUI  |      |      |  [   |   |  ]   |   "  |   '  |   ;  | RALT |  ?   |\/Sft |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
- *               | META |ESC/  |Space/|Tab/  |                 |Back  |Enter/| Del/ | SYMB |
- *               |      |~SYMB |LCtrl |Shift |                 |Space |~META | RCTRL|      |
+ *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| Del/ | SYMB/|
+ *               | LALT |~SYMB |LCtrl |Shift |                 |Shift |~META | RCTRL| RALT |
  *               `---------------------------'                 `---------------------------'
  */
  [_SYMB] = LAYOUT( \
