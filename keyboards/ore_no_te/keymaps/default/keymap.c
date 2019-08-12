@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Sft  |   Z  |   X  |   C  |   V  |   B  |  [   |   |  ]   |   N  |   M  |   ,  |   .  |   /  |\/Sft |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
  *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| SYMB/|RCTL/ |
- *               | LALT |~SYMB |LCtrl |Shift |                 |Shift |~META |  DEL | RALT |
+ *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META |  DEL | RALT |
  *               `---------------------------'                 `---------------------------'
  */
 
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q, KC_W,    KC_E,              KC_R,           KC_T,                             KC_Y,           KC_U,              KC_I,              KC_O,            KC_P,    KC_BSLS, \
     KC_LCTL, KC_A, KC_S,    KC_D,              KC_F,           KC_G,           KC_GRV,  KC_EQL,  KC_H,           KC_J,              KC_K,              KC_L,            KC_SCLN, KC_QUOT, \
     KC_LSFT, KC_Z, KC_X,    KC_C,              KC_V,           KC_B,           KC_LBRC, KC_RBRC, KC_N,           KC_M,              KC_COMM,           KC_DOT,          KC_SLSH, KC_RSFT, \
-                   MO(META),   LT(_SYMB, KC_ESC), LCTL_T(KC_SPC), SFT_T(KC_TAB),                    SFT_T(KC_BSPC), LT(_META, KC_ENT), LT(SYMB, KC_DEL), LT(KC_RCTL, KC_RALT) \
+                   MO(_META),   LT(_SYMB, KC_ESC), LCTL_T(KC_SPC), SFT_T(KC_TAB),                    SFT_T(KC_BSPC), LT(_META, KC_ENT), LT(SYMB, KC_DEL), LT(KC_RCTL, KC_RALT) \
   ),
 
 /* EUCALYN Custom
@@ -73,8 +73,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
  * | LSFT |   Z  |  X   |   C  |   V  |   F  |  [   |   |  ]   |   B  |   G  |   T  |   S  |   /  | RSFT |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
- *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| Del/ | SYMB/|
- *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META | RCTRL| RALT |
+ *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| SYMB/|RCTL/ |
+ *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META |  DEL | RALT |
  *               `---------------------------'                 `---------------------------'
  */
 
@@ -98,8 +98,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |   |      |      |      |      |      |      |      |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
- *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| Del/ | SYMB/|
- *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META | RCTRL| RALT |
+ *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| SYMB/|RCTL/ |
+ *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META |  DEL | RALT |
  *               `---------------------------'                 `---------------------------'
  */
 
@@ -123,8 +123,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
  * | Sft  |  F1  |  F2  |  F3  |  F4  |  F5  |  *   |   |  /   |  F8  |  F9  | F10  | F11  | F12  |\/Sft |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
- *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| Del/ | SYMB/|
- *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META | RCTRL| RALT |
+ *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| SYMB/|RCTL/ |
+ *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META |  DEL | RALT |
  *               `---------------------------'                 `---------------------------'
  */
  [_META] = LAYOUT( \
@@ -141,19 +141,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------.                 |------+------+------+------+------+------|
  * | Tab  |   !  |   @  |   #  |   $  |   %  |                 |   ^  |   &  |   *  |   `  |   ~  |  |   |
  * |------+------+------+------+------+------+------.   ,-------------+------+------+------+------+------|
- * | Ctrl |      |   `  |   ~  |   {  |   <  |  (   |   |  )   |   >  |   }  |   :  |   _  |  /   | JPY  |
+ * | Ctrl |      |   `  |   ~  |   {  |   <  |  (   |   |  )   |   >  |   }  |   :  |  _   |  /   | JPY  |
  * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
- * | Sft  |      | APP  | GUI  |      |      |  [   |   |  ]   |   "  |   '  |   ;  | RALT |  ?   |\/Sft |
+ * | Sft  |      | APP  | GUI  |      |      |  [   |   |  ]   |   "  |   '  |   ;  |  -   |  ?   |\/Sft |
  * `------+------+------+------+------+------+------'   `------+------+------+------+------+------+------|
- *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| Del/ | SYMB/|
- *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META | RCTRL| RALT |
+ *               | META/|ESC/  |Space/|Tab/  |                 |BS/   |Enter/| SYMB/|RCTL/ |
+ *               |      |~SYMB |LCtrl |Shift |                 |Shift |~META |  DEL | RALT |
  *               `---------------------------'                 `---------------------------'
  */
  [_SYMB] = LAYOUT( \
      _______, XXXXXXX,  XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, EEP_RST,   RESET, \
      _______, KC_EXLM,  KC_AT,   KC_HASH,   KC_DLR,  KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_GRV,  S(KC_GRV), S(KC_BSLS), \
      _______, XXXXXXX,  KC_GRV,  S(KC_GRV), KC_LCBR, KC_LT,   KC_LPRN, KC_RPRN, KC_GT,   KC_RCBR, KC_COLN, KC_UNDS, KC_SLSH,   KC_JYEN, \
-     _______, XXXXXXX,  KC_APP,  KC_LGUI,   XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, KC_DQT,  KC_QUOT, KC_SCLN, KC_RALT, KC_QUES,   KC_RSFT, \
+     _______, XXXXXXX,  KC_APP,  KC_LGUI,   XXXXXXX, XXXXXXX, KC_LBRC, KC_RBRC, KC_DQT,  KC_QUOT, KC_SCLN, KC_MINS, KC_QUES,   KC_RSFT, \
                         _______, _______,   _______, _______,                   _______, _______, _______, _______ \
  ),
 
